@@ -5,6 +5,9 @@
 :root {
   --background: #F8FAFC;
   --foreground: #1A1A1D;
+  --grey-color: #fbfbfb;
+  --blue-color: #155E95;
+  --primary-color: #3e7b27;
 }
 
 *{
@@ -19,4 +22,183 @@ body {
   color: var(--foreground);
 }
 
+/* components Navbar */
+.navbar {
+  background-color: rgba(251, 251, 251, 0.1);
+  color: var(--foreground);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7px);
+}
 
+.navbar-icon .icons{
+  display: none;
+}
+
+.navbar-icon .icons{
+  font-size: 25px;
+}
+.navbar-account .icons{
+  font-size: 20px;
+}
+.nav .navLink:hover{
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+/* active navbar */
+.active {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  font-weight: 600;
+}
+
+/* components title */
+.title .btn-surah{
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+/* .title .logo .img{
+  border: 5px solid var(--primary-color);
+} */
+
+/* component surah */
+.surah{
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+.surah .card{
+  background-color: var(--grey-color);
+  color: var(--foreground);
+  margin-top: 1rem;
+}
+.surah .card:hover{
+  background-color: var(--primary-color);
+  color: var(--grey-color);
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+  .nomr{
+    background-color: var(--grey-color);
+    color: var(--primary-color);
+  }
+  .nama-surah h2{
+    color: var(--grey-color);
+  }
+}
+.nomr{
+  background-color: var(--primary-color);
+  width: 64px;
+  height: 64px;
+  padding: 15px;
+  color: var(--grey-color);
+  border-radius: 50% 50% 0 0; /* Bentuk dasar */
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); 
+}
+.nomr h3{
+  font-size: 18px;
+  font-weight: 600;
+}
+.nama-surah h2{
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 600;
+}
+.nama-surah .title-surah{
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* component juz */
+.juz .card-hover:hover{
+  background-color: var(--primary-color);
+  color: var(--grey-color);
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+  .nomr{
+    background-color: var(--grey-color);
+    color: var(--primary-color);
+  }
+  .nama-surah h2{
+    color: var(--grey-color);
+  }
+}
+
+/* component surah page */
+.trigernextprevious .navNext:hover{
+  color: var(--primary-color);
+  transition: ease-in-out 0.2s;
+}
+
+/* component contact */
+.contact .judul{
+  color: var(--primary-color);
+}
+.form .form-control{
+  background-color: var(--grey-color);
+  padding: 10px;
+}
+.form .form-control:focus{
+  box-shadow: 0 0 5px 2px rgba(62, 123, 39, 0.658);
+  border: 1px solid var(--primary-color);
+  transition: ease-in 0.2s;
+}
+.form .btn{
+  background-color: var(--primary-color);
+  color: var(--grey-color);
+  font-weight: 600;
+  padding: 7px;
+  border-radius: 5px;
+}
+.form .btn:hover{
+  background-color: var(--grey-color);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  transition: ease-in 0.2s;
+}
+
+/* loading */
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  padding: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--primary-color);
+  --_m: 
+    conic-gradient(#0000 10%,#000),
+    linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+          mask: var(--_m);
+  -webkit-mask-composite: source-out;
+          mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {to{transform: rotate(1turn)}}
+
+/* nomor surah */
+.nomr-surh{
+  background-color: var(--primary-color);
+  width: 75px;
+  height: 64px;
+  padding: 10px;
+  color: var(--grey-color);
+  border-radius: 50% 50% 0 0; /* Bentuk dasar */
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); 
+}
+
+@media screen and (max-width: 768px) {
+  /* navbar */
+  .navbar-icon .icons{
+    display: flex;
+  }
+  .navbar-icon .nav{
+    display: none;
+  }
+  /* active navbar */
+.active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+}
